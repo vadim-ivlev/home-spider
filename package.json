@@ -1,0 +1,24 @@
+{
+  "name": "home-spider",
+  "version": "1.0.0",
+  "description": "full text indexer of local files",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "text",
+    "search",
+    "fulltext",
+    "index",
+    "files",
+    "local"
+  ],
+  "author": "Vadim",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "elasticlunr": "^0.9.5",
+    "fs-readdir-recursive": "^1.1.0"
+  }
+}
