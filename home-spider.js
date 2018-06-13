@@ -5,7 +5,8 @@ const fs            = require('fs');
 const path          = require('path');
 const cheerio       = require('cheerio');
 const elasticlunr   = require('elasticlunr');
-const read          = require('fs-readdir-recursive'); // TODO: get rid of
+// const read          = require('fs-readdir-recursive');       // TODO: get rid of
+const listFiles     = require('readdir-recursive-pattern');
 const u             = require('./home-spider-utils.js');
 
 const exec = child_process.execSync;
@@ -28,7 +29,8 @@ function getListOfFiles(startFolder='.', regexp ){
 let dirName = '_oreilly';
 let fileMask = '\\.s?html?$';
 
-let files = getListOfFiles(dirName,fileMask);
+// let files = getListOfFiles(dirName,fileMask);
+let files = listFiles(dirName,fileMask);
 console.log(`Number of files2 = ${files.length}`);
 
 
